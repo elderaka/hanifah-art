@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fredoka, Poppins } from "next/font/google";
+import { CursorGlow } from "@/app/components/CursorGlow";
 import { StructureToggle } from "@/app/components/StructureToggle";
 import { profile } from "@/lib/content";
 import "./globals.css";
@@ -42,6 +43,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className={`${display.variable} ${body.variable}`}>
       <body>
+        <CursorGlow />
         <StructureToggle />
         {children}
       </body>

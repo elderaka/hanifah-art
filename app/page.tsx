@@ -84,12 +84,12 @@ export default function Home() {
         </button>
       </section>
 
-      <section className="hiBubble" aria-label="Introduction">
+      <section className="hiBubble scrollPop" aria-label="Introduction">
         <strong>Hi!</strong>
         <p>{profile.intro}</p>
       </section>
 
-      <section className="contentsBubble" aria-label="Portfolio contents">
+      <section className="contentsBubble scrollPop" aria-label="Portfolio contents">
         <div className="sectionHeader">
           <p className="eyebrow">Contents</p>
           <h2>Pick a field and the page opens up.</h2>
@@ -106,7 +106,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bubbleSheet">
+      <section className="bubbleSheet scrollPop">
         <div className="sectionHeader">
           <p className="eyebrow">Quick Look</p>
           <h2>A few pages before the full deck.</h2>
@@ -125,7 +125,7 @@ export default function Home() {
       </section>
 
       <section className="accordionStack" aria-label="Portfolio sections">
-        <div className="sectionHeader bubbleIntro">
+        <div className="sectionHeader bubbleIntro scrollPop">
           <p className="eyebrow">Work</p>
           <h2>One page, six drawers.</h2>
           <p>Open a section, switch views, then slide through the images. Nothing leaves this page.</p>
@@ -134,7 +134,7 @@ export default function Home() {
           const open = activeSection === section.slug;
 
           return (
-            <article className={`accordionItem ${open ? "open" : ""}`} id={`section-${section.slug}`} key={section.slug}>
+            <article className={`accordionItem scrollPop ${open ? "open" : ""}`} id={`section-${section.slug}`} key={section.slug}>
               <button className="accordionButton" type="button" aria-expanded={open} onClick={() => setActiveSection(open ? "" : section.slug)}>
                 <span>{String(index).padStart(2, "0")}</span>
                 <strong>{section.title}</strong>
@@ -161,7 +161,7 @@ export default function Home() {
         })}
       </section>
 
-      <section className="aboutContact bubbleSheet" id="contact">
+      <section className="aboutContact bubbleSheet scrollPop" id="contact">
         <div>
           <p className="eyebrow">About</p>
           <h2>Clear first. Cute after.</h2>
