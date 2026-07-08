@@ -20,7 +20,7 @@ const body = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL("https://hanifah-art.vercel.app"),
   title: {
-    default: `${profile.name} - Structured Graphic Designer`,
+    default: `${profile.name} | Graphic Designer`,
     template: `%s - ${profile.name}`
   },
   description: profile.role,
